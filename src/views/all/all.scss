@@ -1,0 +1,44 @@
+@import '@/lib/reset.scss';
+
+.content{
+  // @include flexbox();
+  // @include flex-direction(column);
+  // @include justify-content(center);
+  // @include align-items(center);
+  @include background-color(#ccc);
+  position: relative;
+  .add{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    @include rect(40px,40px);
+    @include color(#fff);
+    @include font-size(20px);
+    @include background-color(rgba(200,50,90,0.8));
+    @include border-radius(50%);
+  }
+  .addbox{
+    @include rect(100%,100%);
+    @include background-color(rgba(100,100,255,0.7));
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    .task{
+      @include rect(80%,100px);
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(space-around);
+      @include align-items(center);
+      @include background-color(#fff);
+      input{
+        @include rect(80%,30px);
+        @include border(1px,solid,#f00);
+      }
+    }
+  }
+}

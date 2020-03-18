@@ -1,9 +1,7 @@
-//容器组件
-import { connect } from 'react-redux'
-import UI from './UI';
-import { getTasklist, getTask, getMf } from './action';
+import { connect } from 'react-redux';
+import Task from './Task';
+import { getTasklist, getTask } from '@/views/all/action';
 
-//获取状态管理器中的状态
 const mapStateToProps = (state) => {
   // console.log(state)
   return {
@@ -12,7 +10,7 @@ const mapStateToProps = (state) => {
     mf: state.taskliststore.mf
   }
 }
-//业务逻辑
+
 const mapDispatchToProps = (dispatch) => {
   return {
     changeTasklist (data) {
@@ -20,13 +18,8 @@ const mapDispatchToProps = (dispatch) => {
     },
     changeTask (data) {
       dispatch(getTask(data));
-    },
-    changeMf (data) {
-      dispatch(getMf(data))
     }
   }
 }
 
-const All = connect(mapStateToProps, mapDispatchToProps)(UI);
-
-export default All;
+export default connect(mapStateToProps, mapDispatchToProps)(Task)

@@ -1,0 +1,25 @@
+@import '@/lib/reset.scss';
+.circle-success{
+  @include background-color(#fff);
+  @include color(#0f0);
+}
+.circle-success.active{
+  @include background-color(#0f0);
+  @include color(#fff);
+}
+.circle-primary{
+  @include background-color(#fff);
+  @include color(#00f);
+}
+.circle-primary.active{
+  @include background-color(#00f);
+  @include color(#fff);
+}
+.circle-warn{
+  @include background-color(#fff);
+  @include color(#f00);
+}
+.circle-warn.active{
+  @include background-color(#f00);
+  @include color(#fff);
+}

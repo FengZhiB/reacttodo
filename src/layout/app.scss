@@ -1,0 +1,38 @@
+@import '@/lib/reset.scss';
+html,body,#root,.App{
+  @include rect(100%,100%)
+}
+.App{
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  header{
+  @include rect(100%,55px);
+  @include background-color(#82d);
+  @include color(#fff);
+  @include text-align(center);
+  @include line-height(55px);
+}
+.content{
+  @include flex();
+  @include rect(100%,auto);
+}
+footer{
+  @include rect(100%,65px);
+  @include background-color(#f59);
+  @include color(#fff);
+  ul{
+    @include flexbox();
+    @include rect(100%,100%);
+    @include justify-content(space-around);
+    @include align-items(center);
+    a{
+      @include rect(60px,60px);
+      @include border-radius(50%);
+      @include text-align(center);
+      @include line-height(60px);
+    }
+  }
+}
+}

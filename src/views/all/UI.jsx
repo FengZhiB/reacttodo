@@ -34,7 +34,7 @@ export default class extends React.Component {
                 let tasklist = this.props.tasklist
                 let time = Date.now();
                 tasklist.push({ task: this.props.task, time, tf: false })
-                console.log(this.props.task);
+                // console.log(this.props.task);
                 this.props.changeTasklist(tasklist)
                 this.props.changeTask('')
                 this.props.changeMf(false)

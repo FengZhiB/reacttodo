@@ -1,7 +1,9 @@
 export default (state = {
   task: '',
   tasklist: [],
-  mf: false
+  mf: false,
+  cf: false,
+  cid: 0
 }, action) => {
   const { type, data } = action;
   switch (type) {
@@ -13,6 +15,10 @@ export default (state = {
       return { ...state, ...{ task: data } }
     case 'CHANGEMF':
       return { ...state, ...{ mf: data } }
+    case 'CHANGECF':
+      return { ...state, ...{ cf: data } }
+    case 'CHANGECID':
+      return { ...state, ...{ cid: data } }
     default:
       break;
   }

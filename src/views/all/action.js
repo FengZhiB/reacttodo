@@ -27,3 +27,21 @@ export function getMf (data) {
     // console.log('333')
   }
 }
+
+export function getCf (data) {
+  return (dispatch) => {
+    dispatch({
+      type: 'CHANGECF',
+      data
+    })
+  }
+}
+
+export function getCid (data) {
+  return (dispatch) => {
+    dispatch({
+      type: 'CHANGECID',
+      data
+    })
+  }
+}
